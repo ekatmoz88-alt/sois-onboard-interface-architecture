@@ -1,0 +1,44 @@
+site_name: SOIS Onboard Interface Architecture
+site_description: System analysis and architecture of spacecraft onboard interface services based on CCSDS SOIS.
+site_author: Ekaterina Motsar
+site_url: https://ekatmoz88-alt.github.io/sois-onboard-interface-architecture/
+repo_url: https://github.com/ekatmoz88-alt/sois-onboard-interface-architecture
+repo_name: ekatmoz88-alt/sois-onboard-interface-architecture
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: blue grey
+      accent: cyan
+nav:
+  - Home: index.md
+  - Architecture:
+      - Layers and OSI mapping: architecture/layers-and-osi.md
+      - SOIS Subnetwork: architecture/subnetwork.md
+      - Interface topologies: architecture/topologies.md
+  - Services:
+      - Application Support: services/app-support.md
+      - Subnetwork Services: services/subnetwork-services.md
+      - Service Matrix: services/service-matrix.md
+  - Quality of Service:
+      - Traffic Classes: qos/traffic-classes.md
+  - Reference:
+      - Glossary: reference/glossary.md
+      - Abbreviations: reference/abbreviations.md
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+plugins:
+  - search
